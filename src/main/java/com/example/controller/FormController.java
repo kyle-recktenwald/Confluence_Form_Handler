@@ -45,4 +45,18 @@ public class FormController {
         return modelAndView;
     }
 
+    @RequestMapping(value="/formSubmissions", method = RequestMethod.GET)
+    public ModelAndView getFormSubmissions(){
+        ModelAndView modelAndView = new ModelAndView();
+
+        FormSubmission formSubmission = new FormSubmission();
+
+        formService.saveFormSubmission(formSubmission);
+
+        modelAndView.addObject("formSubmission", formSubmission);
+
+        modelAndView.setViewName("data_handler_page");
+        return modelAndView;
+    }
+
 }
