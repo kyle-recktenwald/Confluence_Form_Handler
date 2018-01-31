@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Data Handler Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<!--/*@thymesVar id="formSubmission" type="com.example.model.FormSubmission"*/-->
+
+<div class="container">
+
+    <div class="panel-group" style="margin-top:40px">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover table-bordered table-condensed">
+                    <thead><tr>
+                        <th>ID</th>
+                        <th>Email</th>
+                        <th>Comment</th>
+                    </tr></thead>
+                    <th:block>
+                        <tr>
+                            <td th:text="${formSubmission.id}">Email</td>
+                            <td th:text="${formSubmission.email}">Email</td>
+                            <td th:text="${formSubmission.comment}">Comment</td>
+                        </tr>
+                    </th:block>
+
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
